@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* CSS Variables */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5568;
+  --accent: #6c5ce7;
+  --accent-light: #a29bfe;
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+  --accent: #8b5cf6;
+  --accent-light: #a78bfa;
+  --card-bg: #1e1e2e;
+  --border-color: #2d2d3a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+/* Container */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: 80px 0;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glass Effect - FIXED for both themes */
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* Cards - ADD THIS */
+.card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(108, 92, 231, 0.3);
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--accent);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-outline-custom:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Neumorphism */
+.neumorph {
+  background: var(--bg-primary);
+  box-shadow:
+    9px 9px 16px rgba(0, 0, 0, 0.1),
+    -9px -9px 16px rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+/* Progress Bar */
+.progress {
+  background: var(--border-color) !important;
+}
+
+.progress-bar {
+  background: var(--gradient) !important;
+}
+
+/* Form Controls */
+.form-control {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25) !important;
+}
+
+/* Alert Styles */
+.alert-success {
+  background: #d4edda !important;
+  color: #155724 !important;
+  border: none !important;
+}
+
+.alert-danger {
+  background: #f8d7da !important;
+  color: #721c24 !important;
+  border: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .container-custom {
+    padding: 0 15px;
+  }
+}
+
+/* Custom Cursor (Desktop only) */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  .clickable {
+    cursor: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+
+  .magnetic-cursor,
+  .cursor-trail {
+    display: none;
+  }
+}
+/* Override Bootstrap's text-muted for dark mode */
+.text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Ensure card text is visible */
+.card .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Education section specific */
+.card p {
+  color: var(--text-secondary);
+}
+/* Fix all heading colors in cards */
+.card h4,
+.card .h4,
+.card h5,
+.card .h5,
+.card h3,
+.card .h3 {
+  color: var(--text-primary) !important;
+}
+
+/* Fix all text in cards */
+.card p,
+.card span,
+.card div:not(.icon-wrapper) {
+  color: var(--text-secondary);
+}
+
+/* Specifically for Experience section headings */
+#experience .card h4,
+#experience .card .h5 {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+/* Ensure neumorph cards have proper text colors */
+.neumorph h4,
+.neumorph .h4,
+.neumorph h5,
+.neumorph .h5 {
+  color: var(--text-primary) !important;
+}
+
+.neumorph p {
+  color: var(--text-secondary) !important;
+}
+
+/* SPINNER ANIMATION */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
