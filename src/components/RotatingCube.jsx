@@ -15,14 +15,14 @@ const RotatingCube = () => {
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
   const [autoRotate, setAutoRotate] = useState(true);
 
-  const skills = [
-    { icon: <FaReact />, name: "React.js", color: "#61dafb", side: "front" },
-    { icon: <FaNodeJs />, name: "Node.js", color: "#68a063", side: "back" },
-    { icon: <FaDatabase />, name: "MongoDB", color: "#47a248", side: "right" },
-    { icon: <FaPython />, name: "Express.js", color: "#3776ab", side: "left" },
-    { icon: <FaAws />, name: "AWS", color: "#ff9900", side: "top" },
-    { icon: <FaGitAlt />, name: "Git", color: "#f05032", side: "bottom" },
-  ];
+  // const skills = [
+  //   { icon: <FaReact />, name: "React.js", color: "#61dafb", side: "front" },
+  //   { icon: <FaNodeJs />, name: "Node.js", color: "#68a063", side: "back" },
+  //   { icon: <FaDatabase />, name: "MongoDB", color: "#47a248", side: "right" },
+  //   { icon: <FaPython />, name: "Express.js", color: "#3776ab", side: "left" },
+  //   { icon: <FaAws />, name: "AWS", color: "#ff9900", side: "top" },
+  //   { icon: <FaGitAlt />, name: "Git", color: "#f05032", side: "bottom" },
+  // ];
 
   const handleMouseDown = (e) => {
     setIsDragging(true);

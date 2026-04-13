@@ -7,7 +7,6 @@ import {
   FaFigma,
   FaDatabase,
   FaHtml5,
-  FaCss3Alt,
 } from "react-icons/fa";
 import RotatingCube from "./RotatingCube";
 

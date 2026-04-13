@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCopy, FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 const CopyToClipboard = ({ text, children }) => {
   const [copied, setCopied] = useState(false);

@@ -101,7 +101,10 @@ const Home = () => {
               >
                 <FaLinkedin size={24} />
               </a>
-              <a href="#" className="social-icon">
+              <a
+                href="https://twitter.com/waleedbadshah"
+                className="social-icon"
+              >
                 <FaTwitter size={24} />
               </a>
               <a href="waleedbadshah2003@gmail.com" className="social-icon">
